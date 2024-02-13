@@ -1,31 +1,33 @@
-A brief approach on the Calling Functions in a Logical Order
+## Calling Functions in a Logical Order
+
 A brief approach to ensure that Python functions execute in a logical order from top to bottom:
 
-Sequential Calling:
-Be sure to call the functions in the order they are defined. This ensures that the functions execute in a top-to-bottom sequence.
+1. **Sequential Calling:** Be sure to call the functions in the order they are defined. This ensures that the functions execute in a top-to-bottom sequence.
 
-Nested Restriction:
-Be aware that attempting to call a nested function from the global scope will result in an error, as nested functions are only accessible from within their enclosing outer functions.
+2. **Nested Restriction:** Be aware that attempting to call a nested function from the global scope will result in an error, as nested functions are only accessible from within their enclosing outer functions.
 
-Examples:
-Sequential calling: Call functions in the order they are defined. This ensures a top-to-bottom execution flow.
+### Examples:
 
-def func1():
+**Sequential calling:** Call functions in the order they are defined. This ensures a top-to-bottom execution flow.
+
+```python
+def func1(): 
     print("Function 1")
 
-def func2():
+def func2(): 
     print("Function 2")
 
-def func3():
+def func3(): 
     print("Function 3")
 
 # Call functions in desired sequence
 func1()
 func2()
 func3()
-Nested Restriction: Attempting to call a nested function from the global scope will result in an error, as nested functions are only accessible from within their enclosing outer functions.
+**Nested Restriction:** Attempting to call a nested function from the global scope will result in an error, as nested functions are only accessible from within their enclosing outer functions.
 
-Argumented Examples:
+**Argumented Examples:**
+
 Example 1: Sequential Function Calls with Arguments
 
 Sequentially calling functions with arguments ensures both logical order and proper data passing.
